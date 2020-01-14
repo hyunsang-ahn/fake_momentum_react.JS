@@ -3,6 +3,7 @@ import GlobalStyle from "./GlobalStyle";
 // import Name from "./Name";
 import NameContainer from "./Name";
 import ClockContainer from "./Clock";
+import SearchContainer from "./Search";
 
 class App extends Component {
   state = {
@@ -35,6 +36,7 @@ class App extends Component {
         {/*만약에 name 데이터가 null 이라면 NamePresenter 컴포넌트를 실행한다 그게 아니라면 name 값을 보여준다 */}
         <div>
           <ClockContainer name={name === null ? "" : name + ", "} />
+          <SearchContainer /> {/* 추가 */}
         </div>
       </div>
     );
